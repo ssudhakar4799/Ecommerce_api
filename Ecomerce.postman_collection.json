@@ -1,0 +1,615 @@
+{
+	"info": {
+		"_postman_id": "6bd9e2eb-2089-4cec-b56b-d62f3e8c59c7",
+		"name": "Ecomerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36800675"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "createUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"sudhakar\",\r\n    \"email\":\"sudhakar@gmail.com\",\r\n    \"password\":\"Test@123\",\r\n    \"role\":\"super-admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/Ecommerce/createUserProflie",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"Ecommerce",
+								"createUserProflie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "singin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"sudhakar@gmail.com\",\r\n    \"password\":\"Test@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/Ecommerce/loginDetails",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"Ecommerce",
+								"loginDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/Ecommerce/findAllUser",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"Ecommerce",
+								"findAllUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOneUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Nzk1YjdhODk3MDBmODNkOWMyM2FlMWIiLCJpYXQiOjE3Mzc4Njc2MDIsImV4cCI6MTczNzk1NDAwMn0.yNnRoazNvLbQQzKy9WYUihKx5QX8p3lJk8a3GFo3UBY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"userId\":\"6794e4ec7cfee53f407c594e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/Ecommerce/findOneUser?userId=6795b61f9700f83d9c23ae18",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"Ecommerce",
+								"findOneUser"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "6795b61f9700f83d9c23ae18"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userDelete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Nzk1YjdhODk3MDBmODNkOWMyM2FlMWIiLCJpYXQiOjE3Mzc4Njc5NDIsImV4cCI6MTczNzk1NDM0Mn0._H1SXwUd1pse9aCzM46cx3bYGLnb5IR6dq-gj6kCMyQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/Ecommerce/findOneUser?userId=6795b61f9700f83d9c23ae18",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"Ecommerce",
+								"findOneUser"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "6795b61f9700f83d9c23ae18"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "addProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Nzk1YjdhODk3MDBmODNkOWMyM2FlMWIiLCJpYXQiOjE3Mzc4Njc5NDIsImV4cCI6MTczNzk1NDM0Mn0._H1SXwUd1pse9aCzM46cx3bYGLnb5IR6dq-gj6kCMyQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Wireless Headphones",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Noise-cancelling wireless headphones",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "Electronics",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "1500",
+									"type": "text"
+								},
+								{
+									"key": "oldPrice",
+									"value": "2000",
+									"type": "text"
+								},
+								{
+									"key": "startDate",
+									"value": "2025-02-01",
+									"type": "text"
+								},
+								{
+									"key": "deliveryCost",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "freeDelivery",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "url",
+									"type": "file",
+									"src": "/C:/Users/rafiq/Downloads/sonymain.webp"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": [
+										"/C:/Users/rafiq/Downloads/sony_related.jpg",
+										"/C:/Users/rafiq/Downloads/sony_relate_2.jpg",
+										"/C:/Users/rafiq/Downloads/sonyrelate_3.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/Ecommerce/createProduct",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"Ecommerce",
+								"createProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Nzk1YjdhODk3MDBmODNkOWMyM2FlMWIiLCJpYXQiOjE3Mzc4Njc5NDIsImV4cCI6MTczNzk1NDM0Mn0._H1SXwUd1pse9aCzM46cx3bYGLnb5IR6dq-gj6kCMyQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "productId",
+									"value": "6795e38221b5b76f40ece102",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Wireless Headphones",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Noise-cancelling wireless headphones",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "Electronics",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "1500",
+									"type": "text"
+								},
+								{
+									"key": "oldPrice",
+									"value": "2000",
+									"type": "text"
+								},
+								{
+									"key": "startDate",
+									"value": "2025-02-01",
+									"type": "text"
+								},
+								{
+									"key": "deliveryCost",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "freeDelivery",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "url",
+									"type": "file",
+									"src": "/C:/Users/rafiq/Downloads/sonymain.webp"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": "/C:/Users/rafiq/Downloads/sonyHeadphone.webp"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/Ecommerce/updateProduct",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"Ecommerce",
+								"updateProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOneProduct",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Nzk1YjdhODk3MDBmODNkOWMyM2FlMWIiLCJpYXQiOjE3Mzc4Njc5NDIsImV4cCI6MTczNzk1NDM0Mn0._H1SXwUd1pse9aCzM46cx3bYGLnb5IR6dq-gj6kCMyQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/Ecommerce/findOneProduct?productId=6795e38221b5b76f40ece102",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"Ecommerce",
+								"findOneProduct"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "6795e38221b5b76f40ece102"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllProduct",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Nzk1YjdhODk3MDBmODNkOWMyM2FlMWIiLCJpYXQiOjE3Mzc4Njc5NDIsImV4cCI6MTczNzk1NDM0Mn0._H1SXwUd1pse9aCzM46cx3bYGLnb5IR6dq-gj6kCMyQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/Ecommerce/findAllProduct",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"Ecommerce",
+								"findAllProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Nzk1YjdhODk3MDBmODNkOWMyM2FlMWIiLCJpYXQiOjE3Mzc4Njc5NDIsImV4cCI6MTczNzk1NDM0Mn0._H1SXwUd1pse9aCzM46cx3bYGLnb5IR6dq-gj6kCMyQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/Ecommerce/deleteProduct?productId=6795e38221b5b76f40ece102",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"Ecommerce",
+								"deleteProduct"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "6795e38221b5b76f40ece102"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchProduct",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "productOrderDetails",
+			"item": [
+				{
+					"name": "orderProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Nzk1YjYxZjk3MDBmODNkOWMyM2FlMTgiLCJpYXQiOjE3Mzc4Njc4MzQsImV4cCI6MTczNzk1NDIzNH0.sLjv-FeSDOzkIS20voJxUyf2Rks_iiF55ZwjCsoKnng",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user\": \"6795b61f9700f83d9c23ae18\", \r\n  \"product\": \"6795e38221b5b76f40ece102\", \r\n  \"quantity\": 3\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/Ecommerce/createOrderProduct",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"Ecommerce",
+								"createOrderProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOneOrderProduct",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getAllOrderProduct",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Nzk1YjYxZjk3MDBmODNkOWMyM2FlMTgiLCJpYXQiOjE3Mzc4ODQ0OTQsImV4cCI6MTczNzk3MDg5NH0.9mqDKei5exHB5wiCI4MHnnn7iAmvwYym6T4GiuaeqgI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/Ecommerce/findAllOrderProduct",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"Ecommerce",
+								"findAllOrderProduct"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

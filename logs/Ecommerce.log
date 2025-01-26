@@ -1,0 +1,6 @@
+{
+  message: 'Database Connection was Successful',
+  level: 'info',
+  label: 'Ecommerce App Service',
+  timestamp: '2025-01-26T09:58:59.130Z'
+}
